@@ -220,5 +220,10 @@ print(tabulate(table_data, headers=headers, floatfmt=".4f", tablefmt="grid"))
 
 # Save the results to a CSV file
 results_df = pd.DataFrame(table_data, columns=headers)
+
+# Round numeric columns to 4 decimal places
+numeric_columns = results_df.select_dtypes(include=[np.number]).columns
+results_df[numeric_columns] = results_df[numeric_columns].round(4)
+
 results_df.to_csv("recommender_system_results.csv", index=False)
 print("\nResults saved to 'recommender_system_results.csv'")
