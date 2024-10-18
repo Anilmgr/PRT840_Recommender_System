@@ -13,7 +13,7 @@ Dependencies:
     - tabulate
     - logging
 
-Author: [Your Name]
+Author: [Yan Zhang] - Robust Recommender System 2
 Date: October 2024
 """
 
